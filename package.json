@@ -1,0 +1,27 @@
+{
+  "name": "Mock-Premier-League",
+  "version": "1.0.0",
+  "description": "Create an API that serves the latest scores of fixtures of matches in a “Mock Premier League”",
+  "main": "app.js",
+  "repository": "https://github.com/olatocode/Mock-Premier-League.git",
+  "author": "Tobi Awosola",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "jwt": "^0.2.0",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
