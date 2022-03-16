@@ -2,7 +2,7 @@
 
 const mongoose = require("mongoose");
 const validator = require("validator");
-const userSchema = new mongoose.Schema(
+const adminSchema = new mongoose.Schema(
   {
     firstname: {
       type: String,
@@ -54,13 +54,8 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       required: true,
-      enum: ["User"],
-      default: "User",
-    },
-    admin: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Admin",
-      required: true,
+      enum: ["Admin"],
+      default: "Admin",
     },
     date: {
       type: Date,
@@ -72,5 +67,5 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-const userModel = new mongoose.model("User", userSchema);
-module.exports = userModel;
+const adminModel = new mongoose.model("Admin", adminSchema);
+module.exports = adminModel;
